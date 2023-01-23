@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class UserInputCalculator {
+
+    //Calculator asking user what calculation they would like to make
+    public static void main(String[] args){
+
+        //creating operator symbols
+        char operator;
+        //the 2 numbers and their results
+        Double num1, num2, result;
+
+        //creating new scanner
+        Scanner scan = new Scanner(System.in);
+        //user enter an operator
+        System.out.println("Please select an operator: +,-,/,*,%");
+        //fetching the operator
+        operator = scan.next().charAt(0);
+
+        //ask user for first number
+        System.out.println("Please enter your first number:");
+        num1 = scan.nextDouble();
+
+        //ask user for second number
+        System.out.println("Please enter your second number:");
+        num2 = scan.nextDouble();
+
+        //using a switch for all operator functions
+        switch (operator) {
+            //addition
+            case '+':
+                result = num1 + num2;
+                System.out.println(num1 + " + " + num2 + " = " + result);
+                break;
+            //minus
+            case '-':
+                result = num1 - num2;
+                System.out.println(num1 + " - " + num2 + " = " + result);
+                break;
+            //divide
+            case '/':
+                result = num1 / num2;
+                System.out.println(num1 + " / " + num2 + " = " + result);
+                break;
+            //multiply
+            case '*':
+                result = num1 * num2;
+                System.out.println(num1 + " * " + num2 + " = " + result);
+                break;
+            //modulus
+            case '%':
+                result = num1 % num2;
+                System.out.println(num1 + " % " + num2 + " = " + result);
+                break;
+            default:
+                System.out.println("Invalid operator used!");
+                break;
+        }
+        scan.close();
+    }
+}

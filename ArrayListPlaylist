@@ -6,7 +6,7 @@ public class Playlist {
         //creating my playlist
         ArrayList<String> lozTopSongs = new ArrayList<String>();
 
-        //adding songs to playlist
+        //adding songs to my playlist
         lozTopSongs.add("Scoping");
         lozTopSongs.add("Roll the dice");
         lozTopSongs.add("Baby girl");

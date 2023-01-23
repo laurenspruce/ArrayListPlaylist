@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+public class Playlist {
+
+    public static void main(String[] args){
+        //creating my playlist
+        ArrayList<String> lozTopSongs = new ArrayList<String>();
+
+        //adding songs to playlist
+        lozTopSongs.add("Scoping");
+        lozTopSongs.add("Roll the dice");
+        lozTopSongs.add("Baby girl");
+        lozTopSongs.add("BLAST");
+        lozTopSongs.add("Antartica");
+        lozTopSongs.add("Miss you");
+
+        //printing playlist
+        System.out.println(lozTopSongs);
+
+        //checking playlist size
+        System.out.println(lozTopSongs.size());
+
+        //removing a song
+        lozTopSongs.remove("Roll the dice");
+
+        //printing playlist
+        System.out.println(lozTopSongs);
+
+        //swapping songs
+        int indexA = lozTopSongs.indexOf("Baby girl");
+        int indexB = lozTopSongs.indexOf("Miss you");
+
+        String tempA = "Baby girl";
+
+        lozTopSongs.set(indexA, "Miss you");
+        //System.out.println(lozTopSongs);
+        lozTopSongs.set(indexB, tempA);
+        System.out.println(lozTopSongs);
+
+    }
+}

@@ -1,0 +1,40 @@
+public class DNA {
+
+  public static void main(String[] args) {
+
+    //Determining whether a sequence is part of a DNA strand
+    //DNA sequencing
+
+    String dna1 = "ATGCGATACGCTTGA";
+    String dna2 = "ATGCGATACGTGA";
+    String dna3 = "ATTAATATGTACTGA";
+
+    //generic dna variable add the variable you want to test against
+    String dna = dna3;
+
+    //finding the length of dna string
+    int length = dna.length();
+    System.out.println("Length of DNA: " + length);
+
+    //start codon ATG
+    int start = dna.indexOf("ATG");
+    System.out.println("Start: " + start);
+
+    //stop codon TGA
+    int stop = dna.indexOf("TGA");
+    System.out.println("Stop: " + stop);
+
+    //find out if there is a protein
+    if (start != -1 && stop != -1 && (stop - start) % 3 == 0) {
+        String protein = (dna.substring(start,stop+3));
+        System.out.println("Conditions 1 and 2 and 3 are satisified!");
+    } else {
+      System.out.println("No protein.");
+    }
+
+
+
+
+
+  }
+}
